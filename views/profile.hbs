@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+</head>
+
+<body>
+    {{>top}}
+    {{!-- {{ name comes from auth.js}} --}}
+
+    {{#each welcome}}
+    <h1>Hello {{this.name}} </h1>
+    {{/each}}
+
+    <br>
+    <br>
+
+
+    <h2>Profile Page</h2>
+    <h3>Registered users only</h3>
+    <br>
+    <br>
+    <br>
+
+    <form action="exit" method="post">
+        <button type="submit">Logout</button />
+    </form>
+</body>
+
+</html>

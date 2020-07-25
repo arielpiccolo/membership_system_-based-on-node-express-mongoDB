@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <title>landingPage</title>
+</head>
+
+<body>
+    {{>top}}
+
+    {{!-- Login --}}
+    <form class="login" action="/login" method="POST"><b>Profile page Login</b> <br>
+        <input type="email" name="userEmail" placeholder="user@email.com" required />
+        <input type="password" name="userPassword" placeholder="*****" required />
+        <button type="submit">Login</button>
+    </form>
+
+    <h4>Current Registered Users</h4>
+
+
+
+    {{!-- displays all registered user in database --}}
+    {{#each activeUsers}}
+
+
+    <form class="registeredUsers" method="POST">
+
+        <input type="hidden" name="thisEmail" value="{{this.email}}">
+        <input type="hidden" name="thisName" value="{{this.name}}">
+
+        <li style="list-style: none;">
+            <b>Name:</b> {{this.name}} <b>Email:</b> {{this.email}} <br>
+            {{!-- delete form --}}
+            <button type="submit" formaction="/delete">Delete </button> {{!-- details update form --}}
+            <button type="submit" formaction="/update">Update</button>
+
+            {{!-- user current password for both updating and deleting --}}
+            <input type="password" name="thisPassword" placeholder="Current Password" required /> +
+            <input type="text" name="upName" placeholder="New Name" />
+            <input type="email" name="upEmail" placeholder="New Email" />
+            <input type="password" name="upPassword" placeholder="New Password" />
+
+        </li>
+
+        {{!-- <input type="password" name="currentPassword" placeholder="Current Password"> --}}
+    </form>
+
+    {{/each}}
+
+    {{!-- Registration form --}}
+    <br>
+    <form class="registration" action="/" method="POST"><b>Registration Form</b><br>
+        <input type="text" name="userName" placeholder="Napoleon" required />Name<br>
+        <input type="email" name="userEmail" placeholder="napoleonD@email.com" required />Email <br>
+        <input type="password" name="userPassword" placeholder="******" required />Password<br>
+        <input type="password" name="confirmPassword" placeholder="******" required />Confirm Password<br>
+        <button type="submit">Register</button>
+    </form>
+    <br>
+
+    {{message}}
+
+</body>
+
+</html>

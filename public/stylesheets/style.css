@@ -1,0 +1,41 @@
+body {
+    background-color: aqua;
+}
+
+.registration {
+    left: 992px;
+    position: relative;
+    top: -200.55px;
+    height: 155px;
+    width: 250px;
+}
+   
+form:nth-child(2) {
+    left: 92px;
+    position: relative;
+    top: -40.4px;
+    width: 450px;
+}
+   
+form:nth-child(2) > b:nth-child(1) {
+    position: relative;
+    left: 120px;
+}
+   
+li:nth-child(3) {
+    position: relative;
+    top: 48.25px;
+}
+   
+h4:nth-child(3) {
+    width: 200px;
+    top: -32.075px;
+    position: relative;
+    left: 192px;
+}
+   
+form:nth-child(4) {
+    width: 900px;
+    position: relative;
+    top: -81.75px;
+}
