@@ -2,12 +2,25 @@ body {
     background-color: aqua;
 }
 
+.login {
+    margin-bottom: 0px;
+    height: 42px;
+    width: 450px;
+    font-family: Orbitron;
+    text-align: left;
+    letter-spacing: 1px;
+    background-blend-mode: normal;
+    box-shadow: rgb(0, 0, 0) 5px 5px 5px 5px;
+}
+
+
 .registration {
-    left: 992px;
+    height: 145px;
+    width: 190px;
     position: relative;
-    top: -200.55px;
-    height: 155px;
-    width: 250px;
+    top: -355.313px;
+    left: 702px;
+    box-shadow: rgb(0, 0, 0) 5px 5px 5px 5px;
 }
    
 form:nth-child(2) {
@@ -27,6 +40,21 @@ li:nth-child(3) {
     top: 48.25px;
 }
    
+h4:nth-child(4) {
+    position: relative;
+    top: 19.3375px;
+    box-shadow: none;
+    background-blend-mode: normal;
+    background-color: transparent;
+    border: 0px none rgb(0, 0, 0);
+    font-family: Orbitron;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    width: 880px;
+    font-size: 20px;
+}
+
 h4:nth-child(3) {
     width: 200px;
     top: -32.075px;
@@ -38,4 +66,74 @@ form:nth-child(4) {
     width: 900px;
     position: relative;
     top: -81.75px;
+}
+
+p:nth-child(1) {
+    height: 20px;
+    font-family: Orbitron;
+    width: 60px;
+    font-size: 12px;
+    color: rgb(0, 0, 0);
+    text-decoration-line: none;
+    text-transform: uppercase;
+}
+   
+a:nth-child(1) {
+    font-family: Orbitron;
+    width: 55px;
+}
+
+button:nth-child(5) {
+    top: -2.4px;
+    position: relative;
+    left: 12.4px;
+}
+
+.login:nth-child(3) > input:nth-child(3) {
+  padding-bottom: 0px;
+  border-bottom-width: 0px;
+  border-left-width: 2px;
+}
+   
+.login:nth-child(3) > input:nth-child(4) {
+  border-bottom-width: 0px;
+  padding-bottom: 0px;
+}
+
+h3:nth-child(1) {
+  position: relative;
+  top: 11.9875px;
+}
+
+input:nth-child(10) {
+  position: relative;
+  top: -10.335px;
+}
+
+h3:nth-child(1) {
+  position: relative;
+  top: -5.0125px;
+  font-family: Orbitron;
+  font-weight: 100;
+  font-style: normal;
+}
+
+b:nth-child(1) > button:nth-child(2) {
+  position: relative;
+  top: -20.325px;
+}
+
+b:nth-child(1) > input:nth-child(4) {
+  position: relative;
+  top: -17.325px;
+}
+
+b:nth-child(1) > input:nth-child(6) {
+  position: relative;
+  top: -15.325px;
+}
+
+input:nth-child(8) {
+  position: relative;
+  top: -12.325px;
 }

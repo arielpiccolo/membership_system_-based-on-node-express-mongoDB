@@ -31,8 +31,9 @@
         <input type="hidden" name="thisEmail" value="{{this.email}}">
         <input type="hidden" name="thisName" value="{{this.name}}">
 
+        <b>Name:</b> {{this.name}} <b>Email:</b> {{this.email}} <br>
+
         <li style="list-style: none;">
-            <b>Name:</b> {{this.name}} <b>Email:</b> {{this.email}} <br>
             {{!-- delete form --}}
             <button type="submit" formaction="/delete">Delete </button> {{!-- details update form --}}
             <button type="submit" formaction="/update">Update</button>
@@ -52,12 +53,12 @@
 
     {{!-- Registration form --}}
     <br>
-    <form class="registration" action="/" method="POST"><b>Registration Form</b><br>
-        <input type="text" name="userName" placeholder="Napoleon" required />Name<br>
-        <input type="email" name="userEmail" placeholder="napoleonD@email.com" required />Email <br>
-        <input type="password" name="userPassword" placeholder="******" required />Password<br>
-        <input type="password" name="confirmPassword" placeholder="******" required />Confirm Password<br>
-        <button type="submit">Register</button>
+    <form class="registration" action="/" method="POST"><b>
+            <h3>Registration Form</h3> <button type="submit">Register</button><br>
+            <input type="text" name="userName" placeholder="<name>" required /><br>
+            <input type="email" name="userEmail" placeholder="<email>" required /><br>
+            <input type="password" name="userPassword" placeholder="Chose a password" required /><br>
+            <input type="password" name="confirmPassword" placeholder="Confirm password" required /><br>
     </form>
     <br>
 
