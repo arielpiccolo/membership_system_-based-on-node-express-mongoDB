@@ -9,63 +9,67 @@
 </head>
 
 <body>
-    {{>top}}
 
-    {{!-- Login --}}
-    <form class="login" action="/login" method="POST"><b>Profile page Login</b> <br>
-        <input type="email" name="userEmail" placeholder="user@email.com" required />
-        <input type="password" name="userPassword" placeholder="*****" required />
-        <button type="submit">Login</button>
-    </form>
+    <div>
 
-    <h4>Current Registered Users</h4>
+        {{>top}}
 
+        {{!-- Login --}}
+        <form class="login" action="/login" method="POST"><b>Profile page Login</b> <br>
+            <input type="email" name="userEmail" placeholder="user@email.com" required />
+            <input type="password" name="userPassword" placeholder="*****" required />
+            <button type="submit">Login</button>
+        </form>
 
-
-    {{!-- displays all registered user in database --}}
-    {{#each activeUsers}}
+        <h4>Current Registered Users</h4>
 
 
-    <form class="registeredUsers" method="POST">
 
-        <input type="hidden" name="thisEmail" value="{{this.email}}">
-        <input type="hidden" name="thisName" value="{{this.name}}">
+        {{!-- displays all registered user in database --}}
+        {{#each activeUsers}}
 
-        <b>Name:</b> {{this.name}} <b>Email:</b> {{this.email}} <br>
 
-        <li style="list-style: none;">
-            {{!-- delete form --}}
-            <button type="submit" formaction="/delete">Delete </button> {{!-- details update form --}}
-            <button type="submit" formaction="/update">Update</button>
+        <form class="registeredUsers" method="POST">
 
-            {{!-- user current password for both updating and deleting --}}
-            <input type="password" name="thisPassword" placeholder="Current Password" required /> +
-            <input type="text" name="upName" placeholder="New Name" />
-            <input type="email" name="upEmail" placeholder="New Email" />
-            <input type="password" name="upPassword" placeholder="New Password" />
+            <input type="hidden" name="thisEmail" value="{{this.email}}">
+            <input type="hidden" name="thisName" value="{{this.name}}">
 
-        </li>
+            <b>Name:</b> {{this.name}} <b>Email:</b> {{this.email}} <br>
 
-        {{!-- <input type="password" name="currentPassword" placeholder="Current Password"> --}}
-    </form>
+            <li style="list-style: none;">
+                {{!-- delete form --}}
+                <button type="submit" formaction="/delete">Delete </button> {{!-- details update form --}}
+                <button type="submit" formaction="/update">Update</button>
 
-    {{/each}}
+                {{!-- user current password for both updating and deleting --}}
+                <input type="password" name="thisPassword" placeholder="Current Password" required /> +
+                <input type="text" name="upName" placeholder="New Name" />
+                <input type="email" name="upEmail" placeholder="New Email" />
+                <input type="password" name="upPassword" placeholder="New Password" />
 
-    {{!-- Registration form --}}
-    <br>
-    <span class="registration">
-        <form action="/" method="POST"><b>
-                <h3>Registration Form</h3> <button type="submit">Register</button><br>
+            </li>
+
+            {{!-- <input type="password" name="currentPassword" placeholder="Current Password"> --}}
+        </form>
+
+        {{/each}}
+
+        {{!-- Registration form --}}
+        <br>
+        <form class="registration" action="/" method="POST"><b>
+
+                <button type="submit">Get Register Here:</button><br>
                 <input type="text" name="userName" placeholder="<name>" required /><br>
                 <input type="email" name="userEmail" placeholder="<email>" required /><br>
                 <input type="password" name="userPassword" placeholder="Chose a password" required /><br>
                 <input type="password" name="confirmPassword" placeholder="Confirm password" required /><br>
         </form>
-    </span>
 
-    <br>
+        <br>
 
-    {{message}}
+        {{message}}
+
+    </div>
 
 </body>
 

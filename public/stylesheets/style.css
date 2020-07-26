@@ -8,11 +8,19 @@ body {
     width: 450px;
     font-family: Orbitron;
     text-align: left;
-    letter-spacing: 1px;
     background-blend-mode: normal;
-    box-shadow: rgb(0, 0, 0) 5px 5px 5px 5px;
+    /* box-shadow: rgb(0, 0, 0) 3px 3px 3px 3px;    top: -4px; */
+    position: relative;
+    left: 142px;
+    top: -24px;
+
 }
 
+.login:nth-child(3) > b:nth-child(1) {
+    font-weight: 100;
+    font-style: normal;
+    /* box-shadow: rgb(0, 0, 0) 2px 2px 2px 2px; */
+}
 
 .registration {
     height: 145px;
@@ -49,9 +57,9 @@ h4:nth-child(4) {
     font-family: Orbitron;
     font-weight: 400;
     font-style: normal;
-    text-align: center;
-    width: 880px;
-    font-size: 20px;
+    text-align: left;
+    width: 250px;
+    font-size: 18px;
 }
 
 h4:nth-child(3) {
@@ -78,6 +86,9 @@ p:nth-child(1) {
 }
    
 a:nth-child(1) {
+    font-size: 18px;
+    font-weight: 100;
+    font-style: normal;
     font-family: Orbitron;
     width: 55px;
 }
@@ -136,3 +147,30 @@ input:nth-child(8) {
   position: relative;
   top: -12.325px;
 }
+
+input:nth-child(9) {
+    position: relative;
+    top: 35.7125px;
+}
+
+input:nth-child(7) {
+    position: relative;
+    top: 34.7005px;
+}
+
+b:nth-child(1) > input:nth-child(5) {
+    position: relative;
+    top: 33.7245px;
+}
+   
+b:nth-child(1) > input:nth-child(3) {
+    position: relative;
+    top: 31.7125px;
+}
+
+b:nth-child(1) > button:nth-child(1) {
+    position: relative;
+    top: 28.7125px;
+    text-align: center;
+    font-family: Orbitron;
+   }
